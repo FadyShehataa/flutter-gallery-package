@@ -70,8 +70,17 @@ class _GalleryImageViewWrapperState extends State<GalleryImageViewWrapper> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: widget.showAppBar
+          // ? AppBar(
+          //     title: Text(widget.titleGallery ?? "Gallery"),
+          //   )
           ? AppBar(
-              title: Text(widget.titleGallery ?? "Gallery"),
+              // title: Text(
+              //   widget.titleGallery ?? "Gallery",
+              //   style: const TextStyle(color: Colors.white), // 👈 custom color
+              // ),
+              backgroundColor: Colors.black, // optional
+              iconTheme:
+                  const IconThemeData(color: Colors.white), // 👈 icon color too
             )
           : null,
       backgroundColor: widget.backgroundColor,
